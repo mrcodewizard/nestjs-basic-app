@@ -4,6 +4,7 @@ import * as mongoose from "mongoose";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  const port = process.env.PORT || 4000;
 
   // Connect to MongoDB and listen for events
   await mongoose.connect('mongodb://127.0.0.1:27017/authdb');
@@ -17,6 +18,6 @@ async function bootstrap() {
   });
 
 
-  await app.listen(4000);
+  await app.listen(port);
 }
 bootstrap();
