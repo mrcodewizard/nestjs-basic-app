@@ -22,7 +22,7 @@ async function bootstrap() {
   connecion.once("open", () => console.log("Connected to DB!"));
 
 
-  const port = process.env.PORT || 4000;
+  const port = process.env.PORT || 8080 || 80;
   await app.listen(port);
 }
 bootstrap();
