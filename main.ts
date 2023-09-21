@@ -7,7 +7,7 @@ async function bootstrap() {
   const port = process.env.PORT || 4000;
 
   // Connect to MongoDB and listen for events
-  await mongoose.connect('mongodb://127.0.0.1:27017/authdb');
+  await mongoose.connect('mongodb+srv://mubashirrahman503:<password>@tododb.ddmwhia.mongodb.net/?retryWrites=true&w=majoritymongodb+srv://mubashirrahman503:Mcsm@1635@tododb.ddmwhia.mongodb.net/?retryWrites=true&w=majority');
 
   mongoose.connection.on('connected', () => {
     console.log('Connected to MongoDB');
