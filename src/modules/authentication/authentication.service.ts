@@ -33,7 +33,7 @@ export class AuthenticationService {
          result.token = token;
 
          /** save token in the db **/
-         const updated = await this.userModel.findByIdAndUpdate(result._id, result).select({ username: true, token: true,_id: false });
+         const updated = await this.userModel.findByIdAndUpdate(result._id, result).select('username token');
          return updated;
       }
       catch(error) {
